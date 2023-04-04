@@ -3,7 +3,11 @@ import Image from './Image';
 
 function App() {
     return (
-        <Image/>
+      <>
+      <Image/>
+      <Image/>
+      <Image/>
+      </>
     );
 }
 
