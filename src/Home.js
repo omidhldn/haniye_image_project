@@ -11,18 +11,16 @@ const DUMMY_DATA = [
 function HomePage() {
   return(
     <>
-      <span>
-        <Link to='/1'>
-          <AnimationElement/>
-        </Link>
-      </span>
-    {/* {DUMMY_DATA.map(el => {
+    {DUMMY_DATA.map(el => {
+      return(
       <div key={el.id}>
         <Link to={`/${el.path}`}>
           <AnimationElement/>
         </Link>
       </div>
-    })} */}
+
+      );
+    })}
     </>
 
   );
