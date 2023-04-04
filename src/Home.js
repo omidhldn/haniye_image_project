@@ -1,54 +1,31 @@
-import { useEffect, useRef } from "react";
-import p5 from "p5";
+import { Link } from "react-router-dom";
+import AnimationElement from "./Animation";
 
-import classes from "./Home.module.css";
-
-let dim;
-
-function sketch(p) {
-  // p is a reference to the p5 instance this sketch is attached to
-  p.setup = function () {
-    p.createCanvas(71, 40); //(width,height)
-    dim = p.width / 2;
-    p.background(0);
-    p.colorMode(p.HSB, 360, 100, 100);
-    p.noStroke();
-    p.ellipseMode(p.RADIUS);
-    p.frameRate(1);
-  };
-
-  p.draw = function () {
-    // your draw code here
-    let y = p.height / 2;
-
-    p.background(0);
-    for (let x = 0; x <= p.width; x += dim) {
-      let radius = dim / 2;
-      let h = p.random(0, 360);
-      for (let r = radius; r > 0; --r) {
-        p.fill(h, 90, 90);
-        p.ellipse(x, y, r, r);
-        h = (h + 1) % 360;
-      }
-    }
-  };
-}
+const DUMMY_DATA = [
+  {id:'i1',path:'1'},
+  {id:'i2',path:'2'},
+  {id:'i3',path:'3'},
+  {id:'i4',path:'4'},
+]
 
 function HomePage() {
-  // create a reference to the container in which the p5 instance should place the canvas
-  const p5ContainerRef = useRef();
+  return(
+    <>
+      <span>
+        <Link to='/1'>
+          <AnimationElement/>
+        </Link>
+      </span>
+    {/* {DUMMY_DATA.map(el => {
+      <div key={el.id}>
+        <Link to={`/${el.path}`}>
+          <AnimationElement/>
+        </Link>
+      </div>
+    })} */}
+    </>
 
-  useEffect(() => {
-    // On component creation, instantiate a p5 object with the sketch and container reference
-    const p5Instance = new p5(sketch, p5ContainerRef.current);
-
-    // On component destruction, delete the p5 instance
-    return () => {
-      p5Instance.remove();
-    };
-  }, []);
-
-  return <div className={classes.item} ref={p5ContainerRef} />;
+  );
 }
 
 export default HomePage;
