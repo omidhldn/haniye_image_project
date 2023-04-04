@@ -1,12 +1,10 @@
 import './App.css';
-import Image from './Image';
+import HomePage from './Home';
 
 function App() {
     return (
       <>
-      <Image/>
-      <Image/>
-      <Image/>
+      <HomePage/>
       </>
     );
 }

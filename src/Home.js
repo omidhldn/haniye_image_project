@@ -1,14 +1,14 @@
 import { useEffect, useRef } from "react";
 import p5 from "p5";
 
-import classes from "./Image.module.css";
+import classes from "./Home.module.css";
 
 let dim;
 
 function sketch(p) {
   // p is a reference to the p5 instance this sketch is attached to
   p.setup = function () {
-    p.createCanvas(710, 400); //(width,height)
+    p.createCanvas(71, 40); //(width,height)
     dim = p.width / 2;
     p.background(0);
     p.colorMode(p.HSB, 360, 100, 100);
@@ -34,7 +34,7 @@ function sketch(p) {
   };
 }
 
-function Image() {
+function HomePage() {
   // create a reference to the container in which the p5 instance should place the canvas
   const p5ContainerRef = useRef();
 
@@ -51,4 +51,4 @@ function Image() {
   return <div className={classes.item} ref={p5ContainerRef} />;
 }
 
-export default Image;
+export default HomePage;
