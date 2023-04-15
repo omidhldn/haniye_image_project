@@ -12,10 +12,10 @@ const Navigation = () => {
     </div>
   </div>
   <div className={`${classes['background-two']} ${classes['link-container']}`}>
-    <Link className={classes['link-two']} href="/profile">Profile</Link>
+    <Link className={classes['link-two']} to="/profile">Profile</Link>
   </div>
   <div className={`${classes['background-three']} ${classes['link-container']}`}>
-    <Link className={classes['link-three']} href="/gallery">Gallery</Link>
+    <Link className={classes['link-three']} to="/gallery">Gallery</Link>
   </div>
     </div>
   );

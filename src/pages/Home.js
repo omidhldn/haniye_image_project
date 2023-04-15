@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import AnimationBlueToRedElement from "./AnimationBlueToRed";
-import Navigation from "./Navigation";
+import AnimationBlueToRedElement from "../UI/AnimationBlueToRed";
+import Navigation from "../UI/Navigation";
 import classes from "./Home.module.css";
-import AnimationYellowToGreenElement from "./AnimationYellowToGreen";
+import AnimationYellowToGreenElement from "../UI/AnimationYellowToGreen";
 
 const DUMMY_DATA_BLUE_TO_RED = [
   { id: "i1", path: "1"},
