@@ -26,7 +26,7 @@ function sketch(p) {
     for (let x = 0; x <= p.width; x += dim) {
       let radius = dim / 2;
       // Blue to red
-      let h = p.random(210, 360);
+      let h = p.random(70, 120);
       for (let r = radius; r > 0; --r) {
         p.fill(h, 90, 90);
         p.ellipse(x, y, r, r);
@@ -36,7 +36,7 @@ function sketch(p) {
   };
 }
 
-function AnimationBlueToRedElement(props) {
+function AnimationGreenElement(props) {
   // create a reference to the container in which the p5 instance should place the canvas
   const p5ContainerRef = useRef();
 
@@ -55,7 +55,7 @@ function AnimationBlueToRedElement(props) {
   );
 }
 
-export default AnimationBlueToRedElement;
+export default AnimationGreenElement;
 
 /*
 import { useEffect, useRef } from "react";
