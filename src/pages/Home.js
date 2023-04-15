@@ -21,7 +21,7 @@ const DUMMY_DATA_YELLOW_TO_GREEN = [
 function HomePage() {
   return (
     <>
-      <Navigation />
+      {/* <Navigation /> */}
       <div className={classes.container}>
         {DUMMY_DATA_BLUE_TO_RED.map((el) => {
           return (
