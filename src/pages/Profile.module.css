@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400&display=swap');
+
+.main-container {
+  height: 80vh;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.2em;  
+  background-color: #d1d0d0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  /* margin: 5rem; */
+  width: 34rem;
+}
+
+.introduction {
+  width: 25rem;
+  text-align: justify;
+}
+
+.haniye {
+  display: flex;
+  flex-direction: row;
+}
+
+.haniye img {
+  height: 5rem;
+  margin-right: 1rem;
+}
+
+.haniye span {
+  line-height: 5rem;
+}
+
+.like {
+  margin-top: 1rem;
+  line-height: 1rem;
+}
+
+.design {
+  color: #F3394F;
+}
+
+.paint {
+  color: #44D14A;
+}
+
+.write {
+  color: #4575F1;
+}
+
+.coding {
+  color: #E6F255;
+}
