@@ -1,12 +1,13 @@
 import "./App.css";
 import HomePage from "./pages/Home";
 import DetailPage from "./pages/Detail";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, createHashRouter } from "react-router-dom";
 import ProfilePage from "./pages/Profile";
 import GalleryPage from "./pages/Gallery";
 import RootLayout from "./pages/Root";
 
-const router = createBrowserRouter([
+// const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <RootLayout />,
